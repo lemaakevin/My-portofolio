@@ -1,12 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Pages Site</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kevin Lema - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <h1>Welcome to My Site</h1>
-    <p>This is my GitHub Pages site.</p>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="container">
+      <a href="#" class="logo">Kevin Lemaitoi</a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" id="mobile-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home" class="home">
+    <div class="container">
+      <div class="home-content">
+        <h1>Hi, I'm <span>Kevin Lemaitoi</span></h1>
+        <p>A Computer Science student at Kirinyaga University, passionate about Machine Learning, AI, Cybersecurity, and Web Development.</p>
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>
+          I'm Kevin Lema, a Computer Science student at Kitinyaga University. I have a strong interest in Machine Learning, Artificial Intelligence, Cybersecurity, and Web Applications. In my free time, I enjoy coding, swimming, reading novels, and hiking.
+        </p>
+       
+        </div>
+      
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div class="skill">
+          <i class="fas fa-code"></i>
+          <h3>Programming</h3>
+          <p>Python, JavaScript, Java</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-laptop-code"></i>
+          <h3>Web Development</h3>
+          <p>HTML, CSS, React</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-brain"></i>
+          <h3>Machine Learning</h3>
+          <p>TensorFlow, Scikit-learn</p>
+        </div>
+        <div class="skill">
+          <i class="fas fa-shield-alt"></i>
+          <h3>Cybersecurity</h3>
+          <p>Ethical Hacking, Network Security</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project">
+          <img src="images/stock-management.png" alt="Stock Management System">
+          <h3>Stock Management System</h3>
+          <p>A system to manage inventory and track stock levels.</p>
+          <p><strong>Technologies:</strong> Python, Flask, SQLite</p>
+          <a href="#" class="btn">GitHub Link</a>
+        </div>
+        <div class="project">
+          <img src="images/ai-chatbot-robot-access.webp" alt="AI Chatbot">
+          <h3>AI Chatbot</h3>
+          <p>An AI-based chatbot for customer support.</p>
+          <p><strong>Technologies:</strong> Python, TensorFlow</p>
+          <a href="#" class="btn">GitHub Link</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </div>
+  </section>-->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <span class="error-message" id="name-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+          <span class="error-message" id="email-error"></span>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+          <span class="error-message" id="message-error"></span>
+        </div>
+        <button type="submit" class="btn" id="submit-btn">
+          <span class="btn-text">Send Message</span>
+          <span class="loading-spinner"></span>
+        </button>
+        <p id="form-status"></p>
+      </form>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:lemaakevin@gmail.com">lemaakevin@gmail.com</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-phone"></i>
+          <a href="tel:+254759980844">+254 759 980 844</a>
+        </div>
+        <div class="contact-item">
+          <i class="fas fa-globe"></i>
+          <a href="https://x.com/kyrie_kevine" target="_blank">X (formerly Twitter)</a>
+
+        </div>
+        <div class="contact-item">
+          <i class="fab fa-github"></i>
+          <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2023 Kevin Lemaa. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://twitter.com/kyrie_kevine" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
